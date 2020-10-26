@@ -4,9 +4,10 @@ import "./ToDoList.scss";
 
 const ToDoList = () => {
   const todosData = JSON.parse(localStorage.getItem("todos"));
+
   const [value, setValue] = useState("");
   const [todos, setTodos] = useState(todosData);
-console.log(localStorage)
+  console.log(todos);
   const handleChange = ({ target }) => {
     setValue(target.value);
   };
@@ -18,9 +19,8 @@ console.log(localStorage)
   };
 
   const addTodo = (text) => {
-    localStorage.setItem("todos", JSON.stringify([...todos, text]));
-
-    todos !== null ?  setTodos(JSON.parse(localStorage.getItem("todos"))) :  setTodos([]);
+     todos !== null ? localStorage.setItem("todos", JSON.stringify([...todos, text])) : localStorage.setItem("todos", JSON.stringify([]));
+     todos !== null ?  setTodos(JSON.parse(localStorage.getItem("todos"))) :  setTodos([]);
   };
 
   const deleteTodo = (index) => {
@@ -52,7 +52,7 @@ console.log(localStorage)
             placeholder="What's my task?"
             onChange={handleChange}
             required
-            // minLength="1"
+
           />
         </form>
 
