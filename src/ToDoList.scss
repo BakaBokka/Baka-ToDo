@@ -1,0 +1,76 @@
+.todo {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-image: url('./images/bumaga-list-beloe.jpg');
+  font-family: 'Just Another Hand', 'Amatic SC', cursive;
+  color: #353535;
+  &__content {
+    position: relative;
+    max-width: 30%;
+    width: 100%;
+  }
+
+  &__title {
+    max-width: 100%;
+    width: 100%;
+    max-height: 100px;
+    padding: 20px 20px;
+    margin: 0 0 20px 0;
+    display: inline-block;
+    text-align: center;
+    border: 3px solid #333333;
+    font-size: 2.0833vw;
+    border-radius: 2% 6% 5% 4% / 1% 1% 2% 4%;
+    // text-transform: uppercase;
+    letter-spacing: 0.3ch;
+
+    position: relative;
+    box-sizing: border-box;
+    font-family: 'Just Another Hand', 'Amatic SC', cursive;
+    font-weight: 400;
+
+    &::before {
+      content: "";
+      border: 2px solid #353535;
+      display: block;
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate3d(-50%, -50%, 0) scale(1.015) rotate(0.5deg);
+      border-radius: 1% 1% 2% 4% / 2% 6% 5% 4%;
+    }
+  }
+  &__form {
+    max-width: 100%;
+    width: 100%;
+  }
+
+  &__input {
+    max-width: 100%;
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    border-radius: 5px;
+    border: 2px solid #353535 ;
+    outline: none;
+    background: transparent;
+    
+
+     &:focus {
+      border-color: #a0a0a0;
+     }
+
+  }
+
+  &__tasks {
+    max-width: 100%;
+    width: 100%;
+    list-style: none;
+    padding: 0;
+  }
+}

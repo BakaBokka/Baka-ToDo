@@ -1,0 +1,15 @@
+.todo__task {
+  padding: 5px 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  // border: 1px solid silver;
+  border-radius: 5px;
+}
+
+.todo__deleteIcon {
+  width: 16px;
+  height: 16px;
+  padding: 10px;
+  cursor: pointer;
+}
