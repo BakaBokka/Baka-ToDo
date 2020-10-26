@@ -1,4 +1,12 @@
 # Baka's ToDo-List
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+ https://bakabokka.github.io/Baka-ToDo/
 
+
+===
+Just my simple ToDo-app. Made with React.js
+
+* You may add the task
+* You may delete the task
+* You may send me a job offer
+* Tasks are saved in the localstorage

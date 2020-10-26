@@ -5,11 +5,18 @@
   align-items: center;
   // border: 1px solid silver;
   border-radius: 5px;
+  box-sizing: border-box;
 }
 
 .todo__deleteIcon {
-  width: 16px;
-  height: 16px;
+  width: 20px;
+  height: 20px;
   padding: 10px;
+
   cursor: pointer;
+  // transition-duration: .5s;
+
+  // &:hover {
+  //   transform: rotate(10deg);
+  // }
 }
