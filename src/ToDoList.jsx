@@ -3,7 +3,9 @@ import Task from "./components/Task";
 import "./ToDoList.scss";
 
 const ToDoList = () => {
-  const todosData = JSON.parse(localStorage.getItem("todos"));
+  let todosData = localStorage.getItem("todos")
+    ? JSON.parse(localStorage.getItem("todos"))
+    : [];
 
   const [value, setValue] = useState("");
   const [todos, setTodos] = useState(todosData);
@@ -19,8 +21,12 @@ const ToDoList = () => {
   };
 
   const addTodo = (text) => {
-     todos !== null ? localStorage.setItem("todos", JSON.stringify([...todos, text])) : localStorage.setItem("todos", JSON.stringify([]));
-     todos !== null ?  setTodos(JSON.parse(localStorage.getItem("todos"))) :  setTodos([]);
+    todos !== null
+      ? localStorage.setItem("todos", JSON.stringify([...todos, text]))
+      : localStorage.setItem("todos", JSON.stringify([]));
+    todos !== null
+      ? setTodos(JSON.parse(localStorage.getItem("todos")))
+      : setTodos([]);
   };
 
   const deleteTodo = (index) => {
@@ -30,14 +36,9 @@ const ToDoList = () => {
     setTodos(JSON.parse(localStorage.getItem("todos")));
   };
 
-
-  let taskElement;
-
-  if( todos !== null) {
-    taskElement = todos.map((task, i) => (
+  let taskElement = todos !== null ? todos.map((task, i) => (
     <Task task={task} key={i} delete={deleteTodo} index={i} />
-  ));
-  } else taskElement = [];
+  )) : [];
 
   return (
     <section className="todo">
@@ -52,7 +53,6 @@ const ToDoList = () => {
             placeholder="What's my task?"
             onChange={handleChange}
             required
-
           />
         </form>
 
