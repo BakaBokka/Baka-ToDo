@@ -12,7 +12,7 @@ props.delete(props.index)
 
   return (
     <li className="todo__task" >
-     {props.task}
+    <p className="todo__task-text">{props.task}</p>
      <img className="todo__deleteIcon" src={deleteIcon} alt="deleteIcon" onClick={deleteTask}/>
     </li>
   );
