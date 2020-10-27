@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import classNames from "classnames/bind";
 import Task from "./components/Task";
 import "./ToDoList.scss";
 
@@ -9,17 +10,21 @@ const ToDoList = () => {
 
   const [value, setValue] = useState("");
   const [todos, setTodos] = useState(todosData);
-  console.log(todos);
+
+
+//Обработка value инпута
   const handleChange = ({ target }) => {
     setValue(target.value);
   };
 
+//Оброботка сабмита
   const handleSubmit = (event) => {
     event.preventDefault();
     addTodo(value);
     setValue("");
   };
 
+//Добавление таска
   const addTodo = (text) => {
     todos !== null
       ? localStorage.setItem("todos", JSON.stringify([...todos, text]))
@@ -29,6 +34,7 @@ const ToDoList = () => {
       : setTodos([]);
   };
 
+//Удаление таска
   const deleteTodo = (index) => {
     const newTodos = todos.filter((task, i) => i !== index);
     localStorage.setItem("todos", JSON.stringify(newTodos));
@@ -36,9 +42,25 @@ const ToDoList = () => {
     setTodos(JSON.parse(localStorage.getItem("todos")));
   };
 
-  let taskElement = todos !== null ? todos.map((task, i) => (
-    <Task task={task} key={i} delete={deleteTodo} index={i} />
-  )) : [];
+//Удаление всех тасков
+  const clearTodo = () => {
+    localStorage.clear();
+    setTodos([]);
+  }
+
+//Сборка тасков
+  const taskElement =
+    todos !== null
+      ? todos.map((task, i) => (
+          <Task task={task} key={i} delete={deleteTodo} index={i} />
+        ))
+      : [];
+
+//Скрытие кнопки удаления всех тасков, если тасков нет
+  let clearClass = {
+    todo__clear_hidden: !todos.length,
+  }
+
 
   return (
     <section className="todo">
@@ -57,6 +79,8 @@ const ToDoList = () => {
         </form>
 
         <ul className="todo__tasks">{taskElement}</ul>
+        <button  className={classNames("todo__clear", clearClass)}
+        type="button" onClick={clearTodo}>Clear all</button>
       </div>
     </section>
   );

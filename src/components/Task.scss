@@ -6,7 +6,7 @@
   border-radius: 5px;
   box-sizing: border-box;
   font-size: 20px;
- 
+
 }
 
 .todo__deleteIcon {
@@ -15,9 +15,9 @@
   padding: 10px;
 
   cursor: pointer;
-  // transition-duration: .5s;
+  transition-duration: .5s;
 
-  // &:hover {
-  //   transform: rotate(10deg);
-  // }
+  &:hover {
+    transform: scale(1.1);
+  }
 }
