@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.css": "/Baka-ToDo/static/css/main.a6b90a68.chunk.css",
-    "main.js": "/Baka-ToDo/static/js/main.a0ed225b.chunk.js",
-    "main.js.map": "/Baka-ToDo/static/js/main.a0ed225b.chunk.js.map",
+    "main.css": "/Baka-ToDo/static/css/main.050916cb.chunk.css",
+    "main.js": "/Baka-ToDo/static/js/main.772e2756.chunk.js",
+    "main.js.map": "/Baka-ToDo/static/js/main.772e2756.chunk.js.map",
     "runtime-main.js": "/Baka-ToDo/static/js/runtime-main.03e2806e.js",
     "runtime-main.js.map": "/Baka-ToDo/static/js/runtime-main.03e2806e.js.map",
     "static/js/2.cc1e2d2d.chunk.js": "/Baka-ToDo/static/js/2.cc1e2d2d.chunk.js",
@@ -10,7 +10,7 @@
     "static/js/3.c8474d42.chunk.js": "/Baka-ToDo/static/js/3.c8474d42.chunk.js",
     "static/js/3.c8474d42.chunk.js.map": "/Baka-ToDo/static/js/3.c8474d42.chunk.js.map",
     "index.html": "/Baka-ToDo/index.html",
-    "static/css/main.a6b90a68.chunk.css.map": "/Baka-ToDo/static/css/main.a6b90a68.chunk.css.map",
+    "static/css/main.050916cb.chunk.css.map": "/Baka-ToDo/static/css/main.050916cb.chunk.css.map",
     "static/js/2.cc1e2d2d.chunk.js.LICENSE.txt": "/Baka-ToDo/static/js/2.cc1e2d2d.chunk.js.LICENSE.txt",
     "static/media/ToDoList.scss": "/Baka-ToDo/static/media/bumaga-list-beloe.fe34ed04.jpg",
     "static/media/hippo-footprints.9342d27d.png": "/Baka-ToDo/static/media/hippo-footprints.9342d27d.png"
@@ -18,7 +18,7 @@
   "entrypoints": [
     "static/js/runtime-main.03e2806e.js",
     "static/js/2.cc1e2d2d.chunk.js",
-    "static/css/main.a6b90a68.chunk.css",
-    "static/js/main.a0ed225b.chunk.js"
+    "static/css/main.050916cb.chunk.css",
+    "static/js/main.772e2756.chunk.js"
   ]
 }
