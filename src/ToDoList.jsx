@@ -1,7 +1,9 @@
 import React, { useState } from "react";
 import classNames from "classnames/bind";
 import Task from "./components/Task";
+
 import "./ToDoList.scss";
+import Dictaphone from "./components/Dictaphone";
 
 const ToDoList = () => {
   let todosData = localStorage.getItem("todos")
@@ -11,20 +13,21 @@ const ToDoList = () => {
   const [value, setValue] = useState("");
   const [todos, setTodos] = useState(todosData);
 
-
-//Обработка value инпута
+  //Обработка value инпута
   const handleChange = ({ target }) => {
+    console.log(target);
     setValue(target.value);
   };
 
-//Оброботка сабмита
+  //Оброботка сабмита
   const handleSubmit = (event) => {
     event.preventDefault();
     addTodo(value);
     setValue("");
   };
 
-//Добавление таска
+
+  //Добавление таска
   const addTodo = (text) => {
     todos !== null
       ? localStorage.setItem("todos", JSON.stringify([...todos, text]))
@@ -34,7 +37,7 @@ const ToDoList = () => {
       : setTodos([]);
   };
 
-//Удаление таска
+  //Удаление таска
   const deleteTodo = (index) => {
     const newTodos = todos.filter((task, i) => i !== index);
     localStorage.setItem("todos", JSON.stringify(newTodos));
@@ -42,13 +45,13 @@ const ToDoList = () => {
     setTodos(JSON.parse(localStorage.getItem("todos")));
   };
 
-//Удаление всех тасков
+  //Удаление всех тасков
   const clearTodo = () => {
     localStorage.clear();
     setTodos([]);
-  }
+  };
 
-//Сборка тасков
+  //Сборка тасков
   const taskElement =
     todos !== null
       ? todos.map((task, i) => (
@@ -56,11 +59,10 @@ const ToDoList = () => {
         ))
       : [];
 
-//Скрытие кнопки удаления всех тасков, если тасков нет
+  //Скрытие кнопки удаления всех тасков, если тасков нет
   let clearClass = {
     todo__clear_hidden: !todos.length,
-  }
-
+  };
 
   return (
     <section className="todo">
@@ -74,13 +76,21 @@ const ToDoList = () => {
             value={value}
             placeholder="What's my task?"
             onChange={handleChange}
+            // onInput={handleChange}
             required
           />
+            <Dictaphone setValue={setValue}/>
         </form>
 
         <ul className="todo__tasks">{taskElement}</ul>
-        <button  className={classNames("todo__clear", clearClass)}
-        type="button" onClick={clearTodo}>Clear all</button>
+        <button
+          className={classNames("todo__clear", clearClass)}
+          type="button"
+          onClick={clearTodo}
+        >
+          Clear all
+        </button>
+
       </div>
     </section>
   );

@@ -53,12 +53,14 @@
   &__form {
     max-width: 100%;
     width: 100%;
+    display: flex;
   }
 
   &__input {
     max-width: 100%;
     width: 100%;
     padding: 10px;
+    margin-right: 10px;
     box-sizing: border-box;
     border-radius: 5px;
     border: 2px solid #353535;

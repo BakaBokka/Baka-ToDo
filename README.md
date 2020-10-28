@@ -7,7 +7,7 @@
 
 ### Just my simple ToDo-app. Made with React.js
 
-* You may add the task
+* You may add the task by text or voice
 * You may delete the task
 * You may delete all tasks
 * You may send me a job offer
@@ -16,9 +16,9 @@
 ****
 
 
-###
+### How to try?
 * Clone repo: git clone https://github.com/BakaBokka/Baka-ToDo.git
-* Set dependencies: *npm i*
-* Create production-build: *npm run build*
-* Runs the app in the development mode on the local server: *npm start*
-* Deploy production-build on GitHub Pages: *npm run deploy*
+* Set dependencies: `npm i`
+* Create production-build: `npm run build`
+* Runs the app in the development mode on the local server: `npm start`
+* Deploy production-build on GitHub Pages: `npm run deploy`
