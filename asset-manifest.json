@@ -1,24 +1,24 @@
 {
   "files": {
-    "main.css": "/Baka-ToDo/static/css/main.050916cb.chunk.css",
-    "main.js": "/Baka-ToDo/static/js/main.772e2756.chunk.js",
-    "main.js.map": "/Baka-ToDo/static/js/main.772e2756.chunk.js.map",
-    "runtime-main.js": "/Baka-ToDo/static/js/runtime-main.03e2806e.js",
-    "runtime-main.js.map": "/Baka-ToDo/static/js/runtime-main.03e2806e.js.map",
-    "static/js/2.cc1e2d2d.chunk.js": "/Baka-ToDo/static/js/2.cc1e2d2d.chunk.js",
-    "static/js/2.cc1e2d2d.chunk.js.map": "/Baka-ToDo/static/js/2.cc1e2d2d.chunk.js.map",
-    "static/js/3.c8474d42.chunk.js": "/Baka-ToDo/static/js/3.c8474d42.chunk.js",
-    "static/js/3.c8474d42.chunk.js.map": "/Baka-ToDo/static/js/3.c8474d42.chunk.js.map",
+    "main.css": "/Baka-ToDo/static/css/main.33139967.chunk.css",
+    "main.js": "/Baka-ToDo/static/js/main.bd317a73.chunk.js",
+    "main.js.map": "/Baka-ToDo/static/js/main.bd317a73.chunk.js.map",
+    "runtime-main.js": "/Baka-ToDo/static/js/runtime-main.57830423.js",
+    "runtime-main.js.map": "/Baka-ToDo/static/js/runtime-main.57830423.js.map",
+    "static/js/2.0c35cfd9.chunk.js": "/Baka-ToDo/static/js/2.0c35cfd9.chunk.js",
+    "static/js/2.0c35cfd9.chunk.js.map": "/Baka-ToDo/static/js/2.0c35cfd9.chunk.js.map",
+    "static/js/3.3007e8fe.chunk.js": "/Baka-ToDo/static/js/3.3007e8fe.chunk.js",
+    "static/js/3.3007e8fe.chunk.js.map": "/Baka-ToDo/static/js/3.3007e8fe.chunk.js.map",
     "index.html": "/Baka-ToDo/index.html",
-    "static/css/main.050916cb.chunk.css.map": "/Baka-ToDo/static/css/main.050916cb.chunk.css.map",
-    "static/js/2.cc1e2d2d.chunk.js.LICENSE.txt": "/Baka-ToDo/static/js/2.cc1e2d2d.chunk.js.LICENSE.txt",
+    "static/css/main.33139967.chunk.css.map": "/Baka-ToDo/static/css/main.33139967.chunk.css.map",
+    "static/js/2.0c35cfd9.chunk.js.LICENSE.txt": "/Baka-ToDo/static/js/2.0c35cfd9.chunk.js.LICENSE.txt",
     "static/media/ToDoList.scss": "/Baka-ToDo/static/media/bumaga-list-beloe.fe34ed04.jpg",
     "static/media/hippo-footprints.9342d27d.png": "/Baka-ToDo/static/media/hippo-footprints.9342d27d.png"
   },
   "entrypoints": [
-    "static/js/runtime-main.03e2806e.js",
-    "static/js/2.cc1e2d2d.chunk.js",
-    "static/css/main.050916cb.chunk.css",
-    "static/js/main.772e2756.chunk.js"
+    "static/js/runtime-main.57830423.js",
+    "static/js/2.0c35cfd9.chunk.js",
+    "static/css/main.33139967.chunk.css",
+    "static/js/main.bd317a73.chunk.js"
   ]
 }
