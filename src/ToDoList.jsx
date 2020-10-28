@@ -49,6 +49,7 @@ const ToDoList = () => {
   const clearTodo = () => {
     localStorage.clear();
     setTodos([]);
+    setValue("");
   };
 
   //Сборка тасков
