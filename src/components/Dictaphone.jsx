@@ -7,8 +7,9 @@ import "./Dictaphone.scss";
 
 const Dictaphone = (props) => {
   const [lang, setLang] = useState("eng");
-  const { transcript } = useSpeechRecognition();
+  const { transcript, resetTranscript } = useSpeechRecognition();
   const { setValue } = props;
+  const recognizeEvents = SpeechRecognition.getRecognition();
 
   useEffect(() => {
     setValue(transcript);
@@ -25,6 +26,12 @@ const Dictaphone = (props) => {
 
   const startSpeech = () => {
     SpeechRecognition.startListening({ language: lang });
+  };
+
+  recognizeEvents.onspeechend = function (event) {
+    console.log(transcript);
+    props.handleSubmit(event);
+    resetTranscript();
   };
 
   return (

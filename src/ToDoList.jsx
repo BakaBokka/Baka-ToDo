@@ -15,7 +15,6 @@ const ToDoList = () => {
 
   //Обработка value инпута
   const handleChange = ({ target }) => {
-    console.log(target);
     setValue(target.value);
   };
 
@@ -77,10 +76,10 @@ const ToDoList = () => {
             value={value}
             placeholder="What's my task?"
             onChange={handleChange}
-            // onInput={handleChange}
+
             required
           />
-            <Dictaphone setValue={setValue}/>
+            <Dictaphone setValue={setValue} handleSubmit={handleSubmit}/>
         </form>
 
         <ul className="todo__tasks">{taskElement}</ul>
