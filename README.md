@@ -7,7 +7,7 @@
 
 ### Just my simple ToDo-app. Made with React.js
 
-* You may add the task by text or voice
+* You may add the task by text or voice(russian language only for now)
 * You may delete the task
 * You may delete all tasks
 * You may send me a job offer

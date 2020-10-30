@@ -2,14 +2,15 @@ import React, { useEffect, useState } from "react";
 import SpeechRecognition, {
   useSpeechRecognition,
 } from "react-speech-recognition";
-import micIcon from "../images/mic.png";
+import micIcon from "../images/mic.svg";
 import "./Dictaphone.scss";
 
 const Dictaphone = (props) => {
   const [lang, setLang] = useState("eng");
-  const { transcript, resetTranscript } = useSpeechRecognition();
-  const { setValue } = props;
+
+  const { setValue, handleSubmit } = props;
   const recognizeEvents = SpeechRecognition.getRecognition();
+  const { transcript, resetTranscript } = useSpeechRecognition();
 
   useEffect(() => {
     setValue(transcript);
@@ -29,8 +30,7 @@ const Dictaphone = (props) => {
   };
 
   recognizeEvents.onspeechend = function (event) {
-    console.log(transcript);
-    props.handleSubmit(event);
+    handleSubmit(event);
     resetTranscript();
   };
 
