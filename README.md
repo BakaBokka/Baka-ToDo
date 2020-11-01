@@ -25,5 +25,6 @@
 * Deploy production-build on GitHub Pages: `npm run deploy`
 
 ****
-
+[spoiler]
 ![Everything’s Gonna Be Alright](./src/images/eich.png)
+[/spoiler]
