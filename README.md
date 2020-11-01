@@ -26,4 +26,4 @@
 
 ****
 
-![Everything’s Gonna Be Alright](./images/eich.png)
+![Everything’s Gonna Be Alright](./src/images/eich.png)
