@@ -1,25 +1,25 @@
 {
   "files": {
-    "main.css": "/Baka-ToDo/static/css/main.b4b593af.chunk.css",
-    "main.js": "/Baka-ToDo/static/js/main.21675a1e.chunk.js",
-    "main.js.map": "/Baka-ToDo/static/js/main.21675a1e.chunk.js.map",
-    "runtime-main.js": "/Baka-ToDo/static/js/runtime-main.57830423.js",
-    "runtime-main.js.map": "/Baka-ToDo/static/js/runtime-main.57830423.js.map",
-    "static/js/2.491ad380.chunk.js": "/Baka-ToDo/static/js/2.491ad380.chunk.js",
-    "static/js/2.491ad380.chunk.js.map": "/Baka-ToDo/static/js/2.491ad380.chunk.js.map",
-    "static/js/3.3007e8fe.chunk.js": "/Baka-ToDo/static/js/3.3007e8fe.chunk.js",
-    "static/js/3.3007e8fe.chunk.js.map": "/Baka-ToDo/static/js/3.3007e8fe.chunk.js.map",
+    "main.css": "/Baka-ToDo/static/css/main.42c0e654.chunk.css",
+    "main.js": "/Baka-ToDo/static/js/main.39e76f25.chunk.js",
+    "main.js.map": "/Baka-ToDo/static/js/main.39e76f25.chunk.js.map",
+    "runtime-main.js": "/Baka-ToDo/static/js/runtime-main.ef96632c.js",
+    "runtime-main.js.map": "/Baka-ToDo/static/js/runtime-main.ef96632c.js.map",
+    "static/js/2.7a1b912d.chunk.js": "/Baka-ToDo/static/js/2.7a1b912d.chunk.js",
+    "static/js/2.7a1b912d.chunk.js.map": "/Baka-ToDo/static/js/2.7a1b912d.chunk.js.map",
+    "static/js/3.5c08239e.chunk.js": "/Baka-ToDo/static/js/3.5c08239e.chunk.js",
+    "static/js/3.5c08239e.chunk.js.map": "/Baka-ToDo/static/js/3.5c08239e.chunk.js.map",
     "index.html": "/Baka-ToDo/index.html",
-    "static/css/main.b4b593af.chunk.css.map": "/Baka-ToDo/static/css/main.b4b593af.chunk.css.map",
-    "static/js/2.491ad380.chunk.js.LICENSE.txt": "/Baka-ToDo/static/js/2.491ad380.chunk.js.LICENSE.txt",
+    "static/css/main.42c0e654.chunk.css.map": "/Baka-ToDo/static/css/main.42c0e654.chunk.css.map",
+    "static/js/2.7a1b912d.chunk.js.LICENSE.txt": "/Baka-ToDo/static/js/2.7a1b912d.chunk.js.LICENSE.txt",
     "static/media/ToDoList.scss": "/Baka-ToDo/static/media/bumaga-list-beloe.fe34ed04.jpg",
     "static/media/hippo-footprints.9342d27d.png": "/Baka-ToDo/static/media/hippo-footprints.9342d27d.png",
     "static/media/mic.8562e22a.svg": "/Baka-ToDo/static/media/mic.8562e22a.svg"
   },
   "entrypoints": [
-    "static/js/runtime-main.57830423.js",
-    "static/js/2.491ad380.chunk.js",
-    "static/css/main.b4b593af.chunk.css",
-    "static/js/main.21675a1e.chunk.js"
+    "static/js/runtime-main.ef96632c.js",
+    "static/js/2.7a1b912d.chunk.js",
+    "static/css/main.42c0e654.chunk.css",
+    "static/js/main.39e76f25.chunk.js"
   ]
 }
