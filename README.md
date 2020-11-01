@@ -7,7 +7,7 @@
 
 ### Just my simple ToDo-app. Made with React.js
 
-* You may add the task by text or voice(russian language only for now)
+* You may add the task by text or voice(language depends on your browser settings)
 * You may delete the task
 * You may delete all tasks
 * You drag&drop tasks
@@ -25,6 +25,6 @@
 * Deploy production-build on GitHub Pages: `npm run deploy`
 
 ****
-[spoiler]
+
 ![Everything’s Gonna Be Alright](./src/images/eich.png)
-[/spoiler]
+
