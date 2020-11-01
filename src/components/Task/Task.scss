@@ -8,6 +8,16 @@
   border-radius: 5px;
   box-sizing: border-box;
   font-size: 20px;
+  cursor: grab;
+  cursor: -moz-grab;
+  cursor: -webkit-grab;
+
+  &:active {
+    cursor: grabbing;
+    cursor: -moz-grabbing;
+    cursor: -webkit-grabbing;
+    -moz-animation: alternate               ;
+}
 }
 
 .todo__deleteIcon {
@@ -16,11 +26,15 @@
   padding: 10px 0 10px 10px;
 
   cursor: pointer;
+
   transition-duration: 0.5s;
 
   &:hover {
     transform: scale(1.1);
   }
+
+
+
 }
 
 .todo__task-text {

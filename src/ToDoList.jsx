@@ -1,9 +1,12 @@
-import React, { useState } from "react";
+import React, { useState, useCallback } from "react";
 import classNames from "classnames/bind";
-import Task from "./components/Task";
+import Task from "./components/Task/Task";
+import update from "immutability-helper";
+import { DndProvider } from "react-dnd";
+import { HTML5Backend } from "react-dnd-html5-backend";
 
 import "./ToDoList.scss";
-import Dictaphone from "./components/Dictaphone";
+import Dictaphone from "./components/Dictaphone/Dictaphone";
 
 const ToDoList = () => {
   let todosData = localStorage.getItem("todos")
@@ -24,7 +27,6 @@ const ToDoList = () => {
     addTodo(value);
     setValue("");
   };
-
 
   //Добавление таска
   const addTodo = (text) => {
@@ -51,11 +53,49 @@ const ToDoList = () => {
     setValue("");
   };
 
+  //Обработка перетаскивания таска
+  const moveTaskHandler = useCallback(
+    (dragIndex, hoverIndex) => {
+      const dragItem = todos[dragIndex];
+
+      localStorage.setItem(
+        "todos",
+        JSON.stringify(
+          update(todos, {
+            $splice: [
+              [dragIndex, 1],
+              [hoverIndex, 0, dragItem],
+            ],
+          })
+        )
+      );
+      setTodos(JSON.parse(localStorage.getItem("todos")));
+    },
+    [todos]
+  );
+
+  //Генерация ключей для массива
+  const generateKey = () => {
+    let count = 0;
+    return function () {
+      return count++;
+    };
+  };
+
+  let count = generateKey();
+
   //Сборка тасков
   const taskElement =
     todos !== null
       ? todos.map((task, i) => (
-          <Task task={task} key={i} delete={deleteTodo} index={i} />
+          <Task
+            task={task}
+            key={count()}
+            deleteTodo={deleteTodo}
+            index={i}
+            id={count()}
+            moveTaskHandler={moveTaskHandler}
+          />
         ))
       : [];
 
@@ -76,13 +116,15 @@ const ToDoList = () => {
             value={value}
             placeholder="What's my task?"
             onChange={handleChange}
-
             required
           />
-            <Dictaphone setValue={setValue} handleSubmit={handleSubmit}/>
+          <Dictaphone setValue={setValue} handleSubmit={handleSubmit} />
         </form>
 
-        <ul className="todo__tasks">{taskElement}</ul>
+        <ul className="todo__tasks">
+          <DndProvider backend={HTML5Backend}>{taskElement}</DndProvider>
+        </ul>
+
         <button
           className={classNames("todo__clear", clearClass)}
           type="button"
@@ -90,7 +132,6 @@ const ToDoList = () => {
         >
           Clear all
         </button>
-
       </div>
     </section>
   );
