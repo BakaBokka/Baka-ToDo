@@ -4,6 +4,7 @@ import Task from "./components/Task/Task";
 import update from "immutability-helper";
 import { DndProvider } from "react-dnd";
 import { HTML5Backend } from "react-dnd-html5-backend";
+import { TouchBackend } from 'react-dnd-touch-backend'
 
 import "./ToDoList.scss";
 import Dictaphone from "./components/Dictaphone/Dictaphone";
@@ -103,6 +104,7 @@ const ToDoList = () => {
   let clearClass = {
     todo__clear_hidden: !todos.length,
   };
+  const isMobile = window.innerWidth < 600;
 
   return (
     <section className="todo">
@@ -122,7 +124,7 @@ const ToDoList = () => {
         </form>
 
         <ul className="todo__tasks">
-          <DndProvider backend={HTML5Backend}>{taskElement}</DndProvider>
+          <DndProvider backend={isMobile ? TouchBackend : HTML5Backend}>{taskElement}</DndProvider>
         </ul>
 
         <button
