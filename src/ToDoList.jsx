@@ -2,6 +2,7 @@ import React, { useState, useCallback } from "react";
 import classNames from "classnames/bind";
 import Task from "./components/Task/Task";
 import update from "immutability-helper";
+import {DebounceInput} from 'react-debounce-input';
 import { DndProvider } from "react-dnd";
 import { HTML5Backend } from "react-dnd-html5-backend";
 import { TouchBackend } from 'react-dnd-touch-backend'
@@ -16,10 +17,11 @@ const ToDoList = () => {
 
   const [value, setValue] = useState("");
   const [todos, setTodos] = useState(todosData);
+  console.log(value)
 
   //Обработка value инпута
-  const handleChange = ({ target }) => {
-    setValue(target.value);
+  const handleChange = (e) => {
+    setValue(e.target.value);
   };
 
   //Оброботка сабмита
@@ -111,12 +113,13 @@ const ToDoList = () => {
       <div className="todo__content">
         <h1 className="todo__title">Baka ToDos</h1>
         <form className="todo__form" onSubmit={handleSubmit}>
-          <input
+          <DebounceInput
             className="todo__input"
             type="text"
             autoFocus
             value={value}
             placeholder="What's my task?"
+            debounceTimeout={500}
             onChange={handleChange}
             required
           />
