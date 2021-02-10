@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/Baka-ToDo/static/css/main.bad854a9.chunk.css",
-    "main.js": "/Baka-ToDo/static/js/main.52b8c951.chunk.js",
-    "main.js.map": "/Baka-ToDo/static/js/main.52b8c951.chunk.js.map",
+    "main.js": "/Baka-ToDo/static/js/main.a6215c9b.chunk.js",
+    "main.js.map": "/Baka-ToDo/static/js/main.a6215c9b.chunk.js.map",
     "runtime-main.js": "/Baka-ToDo/static/js/runtime-main.8c8cf51f.js",
     "runtime-main.js.map": "/Baka-ToDo/static/js/runtime-main.8c8cf51f.js.map",
     "static/js/2.f06ebd3d.chunk.js": "/Baka-ToDo/static/js/2.f06ebd3d.chunk.js",
@@ -20,6 +20,6 @@
     "static/js/runtime-main.8c8cf51f.js",
     "static/js/2.f06ebd3d.chunk.js",
     "static/css/main.bad854a9.chunk.css",
-    "static/js/main.52b8c951.chunk.js"
+    "static/js/main.a6215c9b.chunk.js"
   ]
 }
