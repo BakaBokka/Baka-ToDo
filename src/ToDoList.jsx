@@ -17,7 +17,6 @@ const ToDoList = () => {
 
   const [value, setValue] = useState("");
   const [todos, setTodos] = useState(todosData);
-  console.log(value)
 
   //Обработка value инпута
   const handleChange = (e) => {
